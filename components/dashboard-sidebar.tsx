@@ -43,9 +43,6 @@ function DashboardSidebar() {
             <div className="flex items-center justify-center gap-2 border-b-[1px] border-separate p-4">
                 <Logo/>
             </div>
-            <div className="p-4">
-            Todo: User Profile
-            </div>
             <div className="flex flex-col p-2">
                 {routes.map((route, index) => (
                     <Link key={index}
@@ -53,8 +50,8 @@ function DashboardSidebar() {
                        className={buttonVariants({
                            variant: activeRoute.href === route.href ? 'sideBarActiveItem' : 'sideBarItem'
                        })}>
-                        <route.icon/>
-                        <span>{route.label}</span>
+                        <route.icon size={20}/>
+                        {route.label}
                     </Link>
                 ))}
         </div>
